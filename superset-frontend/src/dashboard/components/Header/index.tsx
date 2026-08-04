@@ -680,6 +680,7 @@ const Header = (): JSX.Element => {
                   >
                     <StyledUndoRedoButton
                       buttonStyle="link"
+                      aria-label={t('Undo the action')}
                       disabled={undoLength < 1}
                       onClick={
                         undoLength > 0 ? boundActionCreators.onUndo : undefined
@@ -702,6 +703,7 @@ const Header = (): JSX.Element => {
                   >
                     <StyledUndoRedoButton
                       buttonStyle="link"
+                      aria-label={t('Redo the action')}
                       disabled={redoLength < 1}
                       onClick={
                         redoLength > 0 ? boundActionCreators.onRedo : undefined
